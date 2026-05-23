@@ -18,7 +18,9 @@ jobs:
 
       - name: Build
         run: |
-          touch source/main.cpp
+          ls -la
+          ls -la source/ 2>/dev/null || echo "source 폴더 없음"
+          find . -name "*.cpp" | head -20
           make
         env:
           DEVKITPRO: /opt/devkitpro
