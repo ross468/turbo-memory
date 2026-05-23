@@ -18,7 +18,7 @@ jobs:
 
       - name: Build
         run: |
-          make clean
+          touch source/main.cpp
           make
         env:
           DEVKITPRO: /opt/devkitpro
