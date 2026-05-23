@@ -15,7 +15,9 @@ jobs:
           dkp-pacman -Syu --noconfirm 3ds-dev citro2d citro3d
 
       - name: Build
-        run: make- name: List files
+        run: make
+
+      - name: List files
         run: find . -name "*.3dsx" -o -name "*.3ds" | head -20
 
       - name: Upload artifact
